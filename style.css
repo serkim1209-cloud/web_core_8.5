@@ -1,4 +1,9 @@
-
+@font-face {
+    font-family: "TT Lakes";
+    src: url(./fonts/TTLakes-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 body{
     width: 512px;
@@ -28,7 +33,7 @@ body{
     justify-content: center;
     position:absolute;
     bottom: 40px;
-    left: 70px;
+   
     
 }
 img {
@@ -38,16 +43,20 @@ img {
   
 }
 .title {
+    font-family: "TT Lakes";
+    font-weight: 400;
+    font-style: normal;
     width: 180px;
     height: 80px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.2px;
+    margin-left: 15px;
+
 }
 .gradient{
     width: 24px;
     height: 90px;
-   
     position: absolute;
     background: linear-gradient(to left, white,#ffffff00);
     z-index: 1000;
@@ -55,5 +64,8 @@ img {
     
     
 
+
+}
+@media(min-width: 768px){
 
 }

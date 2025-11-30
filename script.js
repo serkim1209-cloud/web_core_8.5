@@ -6,13 +6,12 @@ new Swiper('.swiper', {
   slidesPerView:1.5,
   centeredSlides: false,
 
-
-
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
 
   } 
+
 
 
 });
