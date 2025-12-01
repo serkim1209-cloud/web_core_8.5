@@ -9,6 +9,9 @@ body{
     width: 512px;
     height: 196px;
 }
+.media{
+    display: none;
+}
 .swiper {
   display: flex;
   flex-direction: column;
@@ -33,7 +36,6 @@ body{
     justify-content: center;
     position:absolute;
     bottom: 40px;
-   
     
 }
 img {
@@ -61,11 +63,46 @@ img {
     background: linear-gradient(to left, white,#ffffff00);
     z-index: 1000;
     right: 0;
-    
-    
-
-
 }
 @media(min-width: 768px){
+.swiper{
+    display: none;
+}
+.media{
+   display:grid;
+   grid-template-columns: repeat(3, 1fr);
+   background-color: rgba(248, 248, 248, 1);
+   width: 800px;
+   gap: 15px;
+}
+.media__brand{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    width: 224px;
+    height: 72px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.title{
+    font-family: "TT Lakes";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 25px;
+    margin-top: 0;
+}
+.media__button{
+    grid-column: 1/1;
+    display: flex;
+    align-items: center;
+}
 
 }
