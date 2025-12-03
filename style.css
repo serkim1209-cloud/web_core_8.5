@@ -89,14 +89,17 @@ body{
 .swiper{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     width: 850px;
-    height: auto;
+    height: 288px;
+    padding-top: 0px;
 
 }
 .swiper-wrapper{
     display: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 20px;
 }
 .title{
@@ -112,6 +115,8 @@ body{
     display: none;
 }
 #media__button{
+    position: absolute;
+    bottom: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,15 +140,15 @@ body{
  .swiper{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     width: 1200px;
-    height: auto;
-    background-color: chartreuse;
-
+    height: 450px;
 }
 .swiper-wrapper{
     display: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 20px;
 }
 .title{
@@ -157,6 +162,8 @@ body{
 }
 
 #media__button{
+    position: absolute;
+    bottom: 170px;;
     display: flex;
     align-items: center;
     justify-content: center;
