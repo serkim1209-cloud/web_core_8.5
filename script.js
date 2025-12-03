@@ -8,12 +8,13 @@ function checkSwiper() {
                 // Optional parameters
                 direction: 'horizontal',
                 loop: true,
-                spaceBetween: 60,
-                slidesPerView: 1.5,
+                spaceBetween: 20,
+                slidesPerView: 'auto',
                 centeredSlides: false,
                 // If we need pagination
                 pagination: {
                     el: '.swiper-pagination',
+                    clickable: true,
                 }
             });
         }
