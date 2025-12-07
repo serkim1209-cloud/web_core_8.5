@@ -74,12 +74,13 @@ showMoreButton.addEventListener('click', function() {
 
 function getHiddenCount() {
   const width = window.innerWidth;
-  if (width > 768) return 5; // планшеты
+  if (width >= 1120) { return 3; // планшеты
  } 
-
+else if (width >= 768) { return 5; // компютеры
+ }
 }
-
-// Вызываем функцию при загрузке страницы
+}
+// Вызываем функцию при зaгрузке страницы
 document.addEventListener('DOMContentLoaded', checkSwiper);
 
 // Вызываем функцию при изменении размера окна (для адаптивности)
