@@ -29,24 +29,7 @@ function checkSwiper() {
             swiper = null; // Сбрасываем переменную в null
         }
     }
-     const btn = document.getElementById('media__button');
-const img = document.getElementById('media__img');
 
-btn.addEventListener('click', () => {
-
-    // Переворот картинки
-    img.classList.toggle('flip');
-
-    // Получаем текущий текст (картинку игнорирует)
-    const text = btn.innerText.trim();
-
-    // Меняем текст
-    if (text === 'Показать все') {
-        btn.innerHTML = '<img id="media__img" src="./img/expand.svg" class="' + (img.classList.contains('flip') ? 'flip' : '') + '">Скрыть';
-    } else {
-        btn.innerHTML = '<img id="media__img" src="./img/expand.svg">Показать все';
-    }
-});
 const showMoreButton = document.getElementById('media__button');
 const slides = document.querySelectorAll('.swiper-slide');
 
@@ -79,6 +62,25 @@ function getHiddenCount() {
 else if (width >= 768) { return 5; // компютеры
  }
 }
+const btn = document.getElementById('media__button');
+
+btn.addEventListener('click', () => {
+    // Находим изображение внутри кнопки при каждом клике,
+    
+    const img = btn.querySelector('#media__img');
+
+    if (img) {
+        // Переключаем класс flip
+        img.classList.toggle('flip');
+
+        // Меняем только текстовый узел (если он есть, или через innerText)
+        if (img.classList.contains('flip')) {
+            btn.lastChild.textContent = 'Скрыть';
+        } else {
+            btn.lastChild.textContent = 'Показать все';
+        }
+    }
+});
 }
 // Вызываем функцию при зaгрузке страницы
 document.addEventListener('DOMContentLoaded', checkSwiper);
